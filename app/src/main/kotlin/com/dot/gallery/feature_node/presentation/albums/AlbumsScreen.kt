@@ -4,6 +4,7 @@
  */
 
 package com.dot.gallery.feature_node.presentation.albums
+import com.dot.gallery.feature_node.presentation.liquidGlass
 
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
@@ -237,7 +238,7 @@ fun AlbumsScreen(
     Scaffold(
         modifier = Modifier
             .padding(horizontalInsets)
-            .consumeWindowInsets(horizontalInsets),
+            .consumeWindowInsets(horizontalInsets).liquidGlass(cornerRadius = 24.dp, blurRadius = 35f),
         topBar = {
             MainSearchBar(
                 isScrolling = isScrolling,
