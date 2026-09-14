@@ -17,11 +17,11 @@ import androidx.compose.ui.unit.dp
 
 fun Modifier.liquidGlass(
     cornerRadius: Dp = 24.dp,
-    blurRadius: Float = 30f
+    blurRadius: Float = 35f
 ): Modifier = composed {
     this
         .graphicsLayer {
-            if (Build.VERSION_CODES.S <= Build.VERSION_SDK_INT) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 renderEffect = RenderEffect
                     .createBlurEffect(blurRadius, blurRadius, Shader.TileMode.CLAMP)
                     .asComposeRenderEffect()
